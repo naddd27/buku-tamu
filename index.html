@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buku Tamu Digital</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <header class="section-header">
+        <h1>Buku Tamu Digital</h1>
+        <p>Silahkan tinggalkan pesan Anda.</p>
+      </header>
+
+      <!-- Notifikasi Feedback -->
+      <div id="alertBox" class="alert" role="alert"></div>
+
+      <!-- Satu Section: Form Input & Tabel Data -->
+      <section class="guestbook-section">
+        <!-- Kolom Form Input -->
+        <div class="card form-card">
+          <h2 class="card-title">Isi Buku Tamu</h2>
+          <form id="formTamu">
+            <div class="form-group">
+              <label for="nama">Nama Lengkap</label>
+              <input
+                type="text"
+                id="nama"
+                name="nama"
+                class="form-control"
+                placeholder="Contoh: Ahmad Fauzi"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="instansi">Instansi / Asal</label>
+              <input
+                type="text"
+                id="instansi"
+                name="instansi"
+                class="form-control"
+                placeholder="Contoh: PT. Maju Jaya / Umum"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="keperluan">Keperluan / Pesan</label>
+              <textarea
+                id="keperluan"
+                name="keperluan"
+                class="form-control"
+                placeholder="Jelaskan maksud dan tujuan kunjungan..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" id="btnSubmit" class="btn-submit">
+              Simpan Data Tamu
+            </button>
+          </form>
+        </div>
+
+        <!-- Kolom Tabel Data Tamu -->
+        <div class="card table-card">
+          <div class="card-title">
+            <span>Daftar Tamu Masuk</span>
+            <span id="totalCount" class="count-pill">Memuat...</span>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <!-- <th>ID</th> -->
+                  <th>Nama</th>
+                  <th>Instansi</th>
+                  <th>Keperluan</th>
+                  <th>Waktu</th>
+                </tr>
+              </thead>
+              <tbody id="tbodyTamu">
+                <!-- Baris data di-generate otomatis oleh app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
